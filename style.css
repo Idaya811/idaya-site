@@ -1,0 +1,781 @@
+* =========================================================
+
+   IDAYA — STYLE
+
+   Les couleurs principales sont regroupées dans :root
+
+   ========================================================= */
+
+:root {
+
+  --ivory: #F7F4EC;
+
+  --ivory-soft: #FBF9F4;
+
+  --sage: #52685D;
+
+  --sage-light: #87998C;
+
+  --champagne: #B79A68;
+
+  --text: #28312D;
+
+  --text-soft: #68716C;
+
+  --line: rgba(40, 49, 45, 0.14);
+
+  --radius: 22px;
+
+  --max-width: 1180px;
+
+}
+
+/* =========================================================
+
+   BASE
+
+   ========================================================= */
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+body {
+
+  margin: 0;
+
+  background: var(--ivory);
+
+  color: var(--text);
+
+  font-family: Arial, sans-serif;
+
+  line-height: 1.6;
+
+}
+
+a {
+
+  color: inherit;
+
+}
+
+img {
+
+  max-width: 100%;
+
+  display: block;
+
+}
+
+/* =========================================================
+
+   HEADER
+
+   ========================================================= */
+
+.site-header {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 20;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 20px 5vw;
+
+  background: rgba(247, 244, 236, 0.96);
+
+  border-bottom: 1px solid var(--line);
+
+}
+
+.logo {
+
+  color: var(--champagne);
+
+  font-family: Georgia, serif;
+
+  font-size: 1.5rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+
+  text-decoration: none;
+
+}
+
+.navigation {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 26px;
+
+}
+
+.navigation a {
+
+  color: var(--text);
+
+  font-size: 0.92rem;
+
+  text-decoration: none;
+
+}
+
+.navigation a:hover {
+
+  color: var(--sage);
+
+}
+
+.menu-button {
+
+  display: none;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--text);
+
+  font-size: 1.5rem;
+
+  cursor: pointer;
+
+}
+
+/* =========================================================
+
+   HERO
+
+   ========================================================= */
+
+.hero {
+
+  max-width: var(--max-width);
+
+  min-height: 78vh;
+
+  margin: 0 auto;
+
+  padding: 90px 5vw;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+
+}
+
+.hero-copy {
+
+  max-width: 560px;
+
+}
+
+.eyebrow,
+
+.section-label {
+
+  margin: 0 0 18px;
+
+  color: var(--champagne);
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+
+}
+
+.hero h1,
+
+.section h2 {
+
+  margin: 0;
+
+  font-family: Georgia, serif;
+
+  font-weight: 500;
+
+  line-height: 1.12;
+
+}
+
+.hero h1 {
+
+  font-size: clamp(3rem, 6vw, 5.4rem);
+
+}
+
+.introduction {
+
+  margin: 26px 0 32px;
+
+  color: var(--text-soft);
+
+  font-size: 1.2rem;
+
+}
+
+.hero-image {
+
+  min-height: 520px;
+
+  border-radius: 120px 28px 28px 28px;
+
+  background:
+
+    linear-gradient(
+
+      145deg,
+
+      var(--sage-light),
+
+      var(--sage)
+
+    );
+
+}
+
+/* =========================================================
+
+   BUTTON
+
+   ========================================================= */
+
+.button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 13px 23px;
+
+  border: 1px solid var(--sage);
+
+  border-radius: 999px;
+
+  background: var(--sage);
+
+  color: white;
+
+  font: inherit;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+}
+
+.button:hover {
+
+  opacity: 0.9;
+
+}
+
+/* =========================================================
+
+   SECTIONS
+
+   ========================================================= */
+
+.section {
+
+  max-width: var(--max-width);
+
+  margin: 0 auto;
+
+  padding: 95px 5vw;
+
+}
+
+.section-heading {
+
+  max-width: 760px;
+
+  margin-bottom: 48px;
+
+}
+
+.section h2 {
+
+  font-size: clamp(2.1rem, 4vw, 3.5rem);
+
+}
+
+.section-columns {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  color: var(--text-soft);
+
+}
+
+/* =========================================================
+
+   ACCOMPAGNEMENTS
+
+   ========================================================= */
+
+.accompagnement-grid {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+
+}
+
+.accompagnement-card {
+
+  overflow: hidden;
+
+  display: block;
+
+  border: 1px solid var(--line);
+
+  border-radius: var(--radius);
+
+  background: var(--ivory-soft);
+
+  text-decoration: none;
+
+  transition:
+
+    transform 0.2s ease,
+
+    box-shadow 0.2s ease;
+
+}
+
+.accompagnement-card:hover {
+
+  transform: translateY(-3px);
+
+  box-shadow:
+
+    0 12px 30px rgba(40, 49, 45, 0.08);
+
+}
+
+.card-image {
+
+  height: 300px;
+
+  background:
+
+    linear-gradient(
+
+      135deg,
+
+      var(--sage-light),
+
+      var(--champagne)
+
+    );
+
+  background-size: cover;
+
+  background-position: center;
+
+}
+
+.card-content {
+
+  padding: 26px;
+
+}
+
+.card-content h3 {
+
+  margin: 0 0 10px;
+
+  font-family: Georgia, serif;
+
+  font-size: 1.35rem;
+
+  font-weight: 500;
+
+}
+
+.card-content p {
+
+  margin: 0;
+
+  color: var(--text-soft);
+
+}
+
+/* =========================================================
+
+   À DOMICILE
+
+   ========================================================= */
+
+.home-support {
+
+  max-width: none;
+
+  padding-left: 10vw;
+
+  padding-right: 10vw;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 60px;
+
+  background: var(--sage);
+
+  color: white;
+
+}
+
+.home-support .section-label {
+
+  color: #D5C39A;
+
+}
+
+.home-support h2 {
+
+  color: white;
+
+}
+
+.home-support > p {
+
+  align-self: center;
+
+}
+
+/* =========================================================
+
+   À PROPOS
+
+   ========================================================= */
+
+.about {
+
+  max-width: 900px;
+
+}
+
+.about > p {
+
+  color: var(--text-soft);
+
+  font-size: 1.08rem;
+
+}
+
+/* =========================================================
+
+   CONTACT
+
+   ========================================================= */
+
+.contact {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+
+}
+
+.contact-copy > p:not(.section-label) {
+
+  color: var(--text-soft);
+
+}
+
+/* =========================================================
+
+   COORDONNÉES
+
+   ========================================================= */
+
+.coordonnees {
+
+  display: grid;
+
+  gap: 7px;
+
+  margin-top: 38px;
+
+}
+
+.coordonnees h3 {
+
+  margin: 0 0 8px;
+
+  font-family: Georgia, serif;
+
+  font-size: 1.35rem;
+
+  font-weight: 500;
+
+}
+
+.coordonnees a {
+
+  text-decoration: none;
+
+}
+
+.coordonnees a:hover {
+
+  color: var(--sage);
+
+}
+
+/* =========================================================
+
+   FORMULAIRE
+
+   ========================================================= */
+
+.contact-form {
+
+  display: grid;
+
+  gap: 18px;
+
+}
+
+.contact-form label {
+
+  display: grid;
+
+  gap: 7px;
+
+  font-size: 0.9rem;
+
+}
+
+input,
+
+select,
+
+textarea {
+
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 12px;
+
+  background: var(--ivory-soft);
+
+  color: var(--text);
+
+  font: inherit;
+
+}
+
+textarea {
+
+  resize: vertical;
+
+}
+
+/* =========================================================
+
+   FOOTER
+
+   ========================================================= */
+
+.site-footer {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 30px 5vw;
+
+  border-top: 1px solid var(--line);
+
+  color: var(--text-soft);
+
+  font-size: 0.85rem;
+
+}
+
+.site-footer strong {
+
+  color: var(--champagne);
+
+}
+
+/* =========================================================
+
+   PHONE
+
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .site-header {
+
+    padding: 16px 5vw;
+
+  }
+
+  .menu-button {
+
+    display: block;
+
+  }
+
+  .navigation {
+
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    right: 0;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 0;
+
+    background: var(--ivory);
+
+    border-bottom: 1px solid var(--line);
+
+  }
+
+  .navigation a {
+
+    padding: 15px 5vw;
+
+    border-top: 1px solid var(--line);
+
+  }
+
+  .hero {
+
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    padding-top: 65px;
+
+    gap: 40px;
+
+  }
+
+  .hero h1 {
+
+    font-size: clamp(2.7rem, 12vw, 4.2rem);
+
+  }
+
+  .hero-image {
+
+    min-height: 360px;
+
+  }
+
+  .section {
+
+    padding: 70px 5vw;
+
+  }
+
+  .section-columns {
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+  }
+
+  .accompagnement-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+
+  }
+
+  .card-image {
+
+    height: 260px;
+
+  }
+
+  .home-support {
+
+    grid-template-columns: 1fr;
+
+    padding-left: 5vw;
+
+    padding-right: 5vw;
+
+    gap: 30px;
+
+  }
+
+  .contact {
+
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+
+  }
+
+  .site-footer {
+
+    flex-direction: column;
+
+    gap: 8px;
+
+  }
+
+}
