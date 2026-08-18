@@ -391,24 +391,14 @@ img {
 }
 
 .card-image {
+   height : 300px;
+   overflow: hidden;
 
-  height: 300px;
-
-  background:
-
-    linear-gradient(
-
-      135deg,
-
-      var(--sage-light),
-
-      var(--champagne)
-
-    );
-
-  background-size: cover;
-
-  background-position: center;
+.card-img {
+   width: 100%;
+   height; 100%
+   object-fit; cover;
+   display, block;
 
 }
 
