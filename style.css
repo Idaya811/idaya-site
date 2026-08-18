@@ -783,3 +783,14 @@ textarea {
   }
 
 }
+body {
+   color : #3B4540 ! important ;
+}
+
+.hero h1,
+.section h2,
+.card-content h3,
+.contact-form,
+.navigation a,{
+   color : #3B4540 ! important;
+}
