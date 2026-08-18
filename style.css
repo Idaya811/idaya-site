@@ -697,7 +697,11 @@ textarea {
     border-top: 1px solid var(--line);
 
   }
-
+   
+.navigation.open {
+   display : flex;
+}
+   
   .hero {
 
     grid-template-columns: 1fr;
